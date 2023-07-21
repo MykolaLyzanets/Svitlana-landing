@@ -80,10 +80,6 @@ body {
   font-family: Poppins,sans-serif;
 }
 
-.text-2 {
-  font-size: 14px !important;
-}
-
 .text-5 {
   font-size: 1.3125rem!important;
 }
@@ -128,7 +124,7 @@ body {
   color: white;
 }
 .section-1 h1 {
-  padding-top: 350px;
+  padding-top: 250px;
 }
 .scroll-btn {
   background-color: #E2FE16;
@@ -209,82 +205,4 @@ body {
 .centered-container {
   display: flex;
   justify-content: center;
-}
-
-/* Just for the Look  */
-body {
-  background: #149cbe;
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-size: 60px;
-}
-/* Wrapper to Center the Typewriter */
-.wrapper {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.centeredBox {
-  width: 100%;
-  text-align: center;
-}
-
-/* The Typewriter */
-.cursor {
-  border-left: 4px solid white;
-}
-
-/* Анімація каретки для машинопису */
-.text-center span {
-  border-right: 0.08em solid #fff;
-  animation: caret 0.75s steps(1) infinite;
-}
-
-@keyframes caret {
-  50% {
-    border-color: transparent;
-  }
-}
-
-.font-size{
-  font-size: 70px;
-}
-
-.resume-btn {
-  display: inline-block;
-  padding: 0.55em 0.8em;
-  font-size: 75%;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 0.65rem;
-}
-
-.br-5{
-  border-radius: 5px;
-}
-
-.download-btn-resume {
-  background-color: #282828;
-  color: grey;
-  display: block;
-  width: 200px; /* Змініть на необхідний розмір кнопки */
-  margin: 0 auto; /* Центрування горизонтально */
-  padding: 17px 15px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 20px;
-  border: grey 3px solid;
-}
-
-.download-btn-resume:hover,
-.download-btn-resume:focus {
-  text-decoration: none;
-  background-color: grey;
-  color: white;
 }
