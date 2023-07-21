@@ -1,0 +1,69 @@
+/* Забезпечення мінімальної висоти для меню */
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-color: #111418;
+  max-width: 250px!important;
+}
+
+/* Збільшення після наведення */
+.sidebar a {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-family: Poppins,sans-serif;
+}
+
+.sidebar a:hover {
+  font-size: 110%;
+  color: #1baa80;
+}
+
+/* Активний пункт меню */
+.sidebar .active {
+  color: white;
+}
+
+.mt-lg-10 {
+    margin-top: 10px;
+}
+/* Медіа-запит для екранів з розміром 768 пікселів або менше */
+@media (max-width: 992px) {
+    /* Змінюємо стиль для класу .sidebar */
+  .sidebar {
+    /* Сховати бокове меню */
+    display: none!important;
+  }
+
+  /* Стилі для хедера на малих екранах */
+  /* Наприклад, ви можете стилізувати хедер, як вам зручно */
+  /* Наприклад: */
+  .header {
+    /* Ваші стилі для хедера */
+    /* Наприклад: */
+    background-color: #f2f2f2;
+    padding: 10px;
+    /* Додайте інші стилі, які вам потрібні */
+  }
+}
+/* Сховати навігаційний бар на екранах 768 пікселів і більше */
+@media (min-width: 992px) {
+  .mobile {
+    display: none!important;
+  }
+}
+
+.mobile {
+  background-color: #111418;
+}
+
+.mobile a {
+  color: white;
+  font-size: 16px;
+  font-family: Poppins,sans-serif;
+}
+
+.text-5 {
+  font-size: 1.3125rem!important;
+}
