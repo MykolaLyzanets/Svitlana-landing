@@ -1,0 +1,208 @@
+body {
+  font-family: Poppins, sans-serif!important;
+}
+
+.home-color {
+  color: #E2FE16;
+}
+
+.back-home-color {
+  background-color: #E2FE16;
+}
+
+.text-white-50 {
+  --bs-text-opacity: 1;
+  color: hsla(0, 0%, 100%, .5) !important;
+}
+
+/* Забезпечення мінімальної висоти для меню */
+.sidebar {
+  position: fixed!important;
+  top: 0;
+  height: 100vh;
+  background-color: #111418;
+}
+
+/* Збільшення після наведення */
+.sidebar a {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-family: Poppins,sans-serif;
+}
+
+.sidebar a:hover {
+  font-size: 110%;
+  color: #1baa80;
+}
+
+/* Активний пункт меню */
+.sidebar .active {
+  color: white;
+}
+
+.mt-lg-10 {
+  margin-top: 10px;
+}
+/* Медіа-запит для екранів з розміром 768 пікселів або менше */
+@media (max-width: 992px) {
+    /* Змінюємо стиль для класу .sidebar */
+  .sidebar {
+    /* Сховати бокове меню */
+    display: none!important;
+  }
+
+  /* Стилі для хедера на малих екранах */
+  /* Наприклад, ви можете стилізувати хедер, як вам зручно */
+  /* Наприклад: */
+  .header {
+    /* Ваші стилі для хедера */
+    /* Наприклад: */
+    background-color: #f2f2f2;
+    padding: 10px;
+    /* Додайте інші стилі, які вам потрібні */
+  }
+}
+/* Сховати навігаційний бар на екранах 768 пікселів і більше */
+@media (min-width: 992px) {
+  .mobile {
+    display: none!important;
+  }
+}
+
+.mobile {
+  background-color: #111418;
+}
+
+.mobile a {
+  color: white;
+  font-size: 16px;
+  font-family: Poppins,sans-serif;
+}
+
+.text-5 {
+  font-size: 1.3125rem!important;
+}
+
+.text-9 {
+  font-size: 2.25rem!important;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.navbar {
+  position: fixed!important;
+  z-index: 1;
+}
+@media (min-width: 992px) {
+  .navbar {
+    position: fixed!important;
+    z-index: 1;
+  }
+}
+@media (max-width: 991px) {
+  .section-1 {
+    display: none;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+.section-1 {
+  color: white;
+}
+.section-1 h1 {
+  padding-top: 250px;
+}
+.scroll-btn {
+  background-color: #E2FE16;
+  color: grey;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.scroll-btn:hover {
+  background-color: #0056b3;
+}
+
+.section-about-me {
+  background-color: #282828!important;
+  color: white;
+}
+
+.section-about-me h1 {
+  padding-top: 50px;
+}
+
+.section-divider {
+  padding-bottom: 7px;
+  border-bottom: 1px solid hsla(0,0%,98%,.12);
+  margin-bottom: 20px; /* Додаємо відступ після полоси */
+  color: white;
+}
+
+.know-me-more-line {
+  background-color: #E2FE16;
+  border-bottom: 5px solid hsla(0,0%,98%,.12);
+  color: white;
+  width: 70px;
+  margin: 0 auto; /* Додаємо автоматичний відступ по горизонталі (центруємо) */
+}
+
+.pt-120px {
+  padding-top: 120px;
+}
+
+.download-btn {
+  background-color: #E2FE16;
+  color: grey;
+  border: none;
+  padding: 20px 50px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.section-what-i-do  {
+  background-color: #282828!important;
+  color: white;
+}
+
+.section-resume h1, .section-what-i-do h1, .section-portfolio h1, .section-contact h1, .section-testimonial h1 {
+  padding-top: 50px;
+}
+
+.section-resume  {
+  background-color: #282828!important;
+  color: white;
+}
+
+.img-size {
+  height: 70px!important;
+  width: 70px;
+}
+
+.border-solid{
+  border: 9px solid grey;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+}
