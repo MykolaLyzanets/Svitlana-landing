@@ -21,9 +21,6 @@ navLinks.forEach((link) => {
     window.scrollBy({
       top: offsetPosition,
       behavior: 'smooth',
-  });
+    });
   });
 });
-
-
-
