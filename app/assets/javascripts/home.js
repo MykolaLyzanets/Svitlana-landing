@@ -24,3 +24,40 @@ navLinks.forEach((link) => {
     });
   });
 });
+
+// Масив з текстами для машинопису
+const textsToType = [
+  "I'm Svitlana.",
+  "I'm a Freelancer.",
+  "I'm designer."
+];
+
+// Змінна для збереження індексу поточного тексту
+let currentTextIndex = 0;
+
+// Функція для машинопису тексту
+function typeWriter(text, i, fnCallback) {
+  if (i < (text.length)) {
+    $('.typewriter-text').text(text.substring(0, i + 1) + '|');
+    setTimeout(function() {
+      typeWriter(text, i + 1, fnCallback)
+    }, 100);
+  } else if (typeof fnCallback == 'function') {
+    setTimeout(function() {
+      $('.typewriter-text').text('');
+      fnCallback();
+    }, 1000);
+  }
+}
+
+// Запуск машинопису після завантаження сторінки
+$(document).ready(function() {
+  function startTyping() {
+    typeWriter(textsToType[currentTextIndex], 0, function() {
+      currentTextIndex = (currentTextIndex + 1) % textsToType.length;
+      startTyping();
+    });
+  }
+
+  startTyping();
+});

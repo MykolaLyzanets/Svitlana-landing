@@ -124,7 +124,7 @@ body {
   color: white;
 }
 .section-1 h1 {
-  padding-top: 250px;
+  padding-top: 350px;
 }
 .scroll-btn {
   background-color: #E2FE16;
@@ -236,4 +236,20 @@ body {
 
 .cursor {
   border-left: 4px solid white;
+}
+
+/* Анімація каретки для машинопису */
+.text-center span {
+  border-right: 0.08em solid #fff;
+  animation: caret 0.75s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.font-size{
+  font-size: 70px;
 }
