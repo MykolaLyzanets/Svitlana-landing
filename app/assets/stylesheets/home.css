@@ -288,3 +288,17 @@ body {
   background-color: grey;
   color: white;
 }
+
+.section-testimonial  {
+  background-color: #282828!important;
+  color: white;
+}
+
+.mt-200px{
+  margin-top: 200px;
+}
+
+.section-contact {
+  background-color: #282828!important;
+  color: white;
+}
