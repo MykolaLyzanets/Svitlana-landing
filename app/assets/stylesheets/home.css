@@ -317,3 +317,26 @@ body {
 .flag {
   cursor: pointer;
 }
+
+footer {
+  background-color: #282828!important;
+  color: white;
+}
+
+.pt-80px {
+  padding-top: 80px;
+}
+
+@media (min-width: 993px) {
+  .section-mobile {
+    display: none;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+
+.home-mobile {
+  color: white;
+}
