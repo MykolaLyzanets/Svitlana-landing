@@ -19,22 +19,41 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-const navLinks = document.querySelectorAll(".navbar-nav a");
+// Отримуємо всі елементи меню
+const navLinks = document.querySelectorAll(".nav-link");
 
+// Додаємо обробник події "click" для кожного елемента меню
 navLinks.forEach(link => {
   link.addEventListener("click", function(e) {
     e.preventDefault();
     const target = document.querySelector(link.getAttribute("href"));
-    const headerOffset = 50; // Висота фіксованого заголовка, якщо він є
+    let headerOffset = 50; // Встановлюємо значення за замовчуванням
+
+    // Перевіряємо ширину вікна
+    if (window.innerWidth >= 992) {
+      // Для екранів 992 і більше встановлюємо headerOffset = 0
+      headerOffset = 0;
+    }
+
     const elementPosition = target.getBoundingClientRect().top;
     const offsetPosition = elementPosition - headerOffset;
 
+    // Прокручуємо до вибраного розділу з відповідною анімацією
     window.scrollBy({
       top: offsetPosition,
       behavior: "smooth"
     });
+
+    // Знімаємо клас .active з усіх елементів меню
+    navLinks.forEach(item => {
+      item.classList.remove("active");
+    });
+
+    // Додаємо клас .active для обраного елемента меню
+    link.classList.add("active");
   });
 });
+
 
 
 // Оновлені масиви з текстами для машинопису для різних мов

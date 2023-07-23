@@ -344,3 +344,12 @@ footer {
 .section-mobile {
   color: white;
 }
+
+.nav .nav-item .nav-link.active {
+  color: #E2FE16;; /* Колір тексту для активного елемента, змініть за потребою */
+}
+
+/* Додатковий стиль для наведення курсору на елемент меню */
+.nav .nav-item .nav-link:hover {
+  color: #E2FE16;;
+}
