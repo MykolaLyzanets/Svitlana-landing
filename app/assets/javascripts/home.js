@@ -7,6 +7,13 @@ document.addEventListener("DOMContentLoaded", function() {
         e.preventDefault();
         const target = this.getAttribute("href");
         document.querySelector(target).classList.toggle("show");
+
+        // Отримуємо елемент навбару і перевіряємо, чи він має клас "show"
+        const navbarNav = document.getElementById("navbarNav");
+        if (navbarNav.classList.contains("show")) {
+          const navbarToggler = document.getElementById("navbar-toggler");
+          navbarToggler.click(); // Закриваємо навбар, викликаючи клік на кнопку тоглера
+        }
       }
     });
   });
@@ -50,6 +57,7 @@ const textsToType = {
 };
 
 let currentTextIndex = 0;
+let isTypewriterActive = false;
 
 function typeWriter(text, i, fnCallback) {
   const typewriterText = document.querySelector('.typewriter-text');
@@ -68,20 +76,37 @@ function typeWriter(text, i, fnCallback) {
 }
 
 function startTyping() {
-  const languageSelect = document.getElementById('language-select');
-  let selectedLanguage = 'en'; // За замовчуванням - англійська
-  if (languageSelect) {
-    selectedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+  if (window.innerWidth >= 992 && !isTypewriterActive) {
+    isTypewriterActive = true;
+
+    const languageSelect = document.getElementById('language-select');
+    let selectedLanguage = 'en'; // За замовчуванням - англійська
+    if (languageSelect) {
+      selectedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    }
+
+    // Оновлено динамічний вибір мови, який забезпечить зміну lang атрибута
+    const typewriterText = document.querySelector('.typewriter-text');
+    typewriterText.lang = selectedLanguage;
+
+    typeWriter(textsToType[selectedLanguage][currentTextIndex], 0, function() {
+      currentTextIndex = (currentTextIndex + 1) % textsToType[selectedLanguage].length;
+      isTypewriterActive = false;
+      startTyping();
+    });
   }
-
-  // Оновлено динамічний вибір мови, який забезпечить зміну lang атрибута
-  const typewriterText = document.querySelector('.typewriter-text');
-  typewriterText.lang = selectedLanguage;
-
-  typeWriter(textsToType[selectedLanguage][currentTextIndex], 0, function() {
-    currentTextIndex = (currentTextIndex + 1) % textsToType[selectedLanguage].length;
-    startTyping();
-  });
 }
 
 document.addEventListener("DOMContentLoaded", startTyping);
+window.addEventListener("resize", function() {
+  // При зміні розміру вікна перевіряємо, чи необхідно зупинити typewriter
+  if (window.innerWidth < 992 && isTypewriterActive) {
+    isTypewriterActive = false;
+    const typewriterText = document.querySelector('.typewriter-text');
+    typewriterText.textContent = '';
+  } else if (window.innerWidth >= 992 && !isTypewriterActive) {
+    // Якщо розмір вікна став більшим за 992 пікселі, і typewriter неактивний, то запускаємо його знову
+    startTyping();
+  }
+});
+

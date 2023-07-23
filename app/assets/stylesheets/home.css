@@ -253,8 +253,12 @@ body {
   }
 }
 
-.font-size{
+.font-size {
   font-size: 70px;
+}
+
+.font-size-40 {
+  font-size: 40px;
 }
 
 .resume-btn {
@@ -337,6 +341,6 @@ footer {
   }
 }
 
-.home-mobile {
+.section-mobile {
   color: white;
 }

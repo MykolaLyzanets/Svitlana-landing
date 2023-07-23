@@ -58,6 +58,8 @@ function updateTranslations(language) {
   var elementsToUpdate = [
     { id: 'welcome-heading', langKey: 'welcome_heading' },
     { id: 'welcome-subheading', langKey: 'welcome_subheading' },
+    { id: 'welcome-mobile', langKey: 'welcome_heading' },
+    { id: 'welcome2-mobile', langKey: 'welcome_subheading' },
     // Тут ви можете додати багато елементів для оновлення перекладів
     // Наприклад:
     // { id: 'about-heading', langKey: 'about_heading' },

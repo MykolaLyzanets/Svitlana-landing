@@ -12,6 +12,7 @@
   <!-- Додайте цей тег перед </body> -->
   <%= javascript_include_tag 'home', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'locale', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'typewriter_mobile', 'data-turbolinks-track': 'reload' %>
 
   <!-- Підключення бібліотеки Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -23,44 +24,7 @@
 <div class="container-fluid">
   <div class="row">
     <%= render partial: "shared/desktop_sidebar_html" %>
-    <!-- Навігаційний бар для екранів до 768 пікселів -->
-    <nav class="mobile navbar navbar-expand-lg navbar navbar-dark bg-dark">
-      <h1 class="text-5 text-white text-center mb-0 d-lg-block">Svitlana Lyzanets</h1>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=100010096574579" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://instagram.com/svitlana_designer__?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/yourpage" target="_blank"><i class="fab fa-twitter"></i></a>
-      </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toggler">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#home-mobile">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about-me-mobile">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#what-i-do-mobile">What I Do</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#resume-mobile">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio-mobile">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#testimonial">Testimonial</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
+    <%= render partial: "shared/mobile_header" %>
     <!-- Зміст сторінки -->
     <div class="col-md-12 ms-sm-auto pl-0 pr-0 mobile">
       <%= render partial: "shared/mobile_first_section" %>
