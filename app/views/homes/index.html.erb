@@ -7,9 +7,12 @@
   <!-- Додайте цей тег у ваш head -->
   <%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= stylesheet_link_tag 'testimonial', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'portfolio', media: 'all', 'data-turbolinks-track': 'reload' %>
 
   <!-- Додайте цей тег перед </body> -->
   <%= javascript_include_tag 'home', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'locale', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'typewriter_mobile', 'data-turbolinks-track': 'reload' %>
 
   <!-- Підключення бібліотеки Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -20,86 +23,21 @@
 <body>
 <div class="container-fluid">
   <div class="row">
-    <!-- Бокове меню -->
-    <nav class="col-md-2 d-lg-block sidebar">
-      <div class="container-fluid">
-        <div class="position-sticky">
-          <div class="container">
-            <div class="row justify-content-center">
-              <a class="mb-lg-auto mt-lg-4">
-                <span class="bg-dark-2 rounded-pill p-2 mb-lg-1 d-none d-lg-inline-block mt-lg-4">
-                  <img class="rounded-pill d-block border-solid" src="logo.jpg" alt="ava" width="160" height="160">
-                </span>
-              </a>
-            </div>
-          </div>
-
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about-me">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#what-i-do">What I Do</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#resume">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#testimonial">Testimonial</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="centered-container">
-            <div class="social-icons mt-3 footer">
-              <a href="https://www.facebook.com/profile.php?id=100010096574579" target="_blank"><i class="fab fa-facebook"></i></a>
-              <a href="https://instagram.com/svitlana_designer__?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://twitter.com/yourpage" target="_blank"><i class="fab fa-twitter"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Навігаційний бар для екранів до 768 пікселів -->
-    <nav class="mobile navbar navbar-expand-lg navbar navbar-dark bg-dark">
-      <h1 class="text-5 text-white text-center mb-0 d-lg-block">Svitlana Lyzanets</h1>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=100010096574579" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://instagram.com/svitlana_designer__?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/yourpage" target="_blank"><i class="fab fa-twitter"></i></a>
-      </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toggler">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about-me">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#what-i-do">What I Do</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
+    <%= render partial: "shared/desktop_sidebar_html" %>
+    <%= render partial: "shared/mobile_header" %>
     <!-- Зміст сторінки -->
+    <div class="col-md-12 ms-sm-auto pl-0 pr-0 mobile">
+      <%= render partial: "shared/mobile_first_section" %>
+      <%= render partial: "shared/mobile_about_me_section" %>
+      <%= render partial: "shared/mobile_wha_i_do_section" %>
+      <%= render partial: "shared/mobile_resume_section" %>
+      <%= render partial: "shared/mobile_portfolio_section" %>
+      <%= render partial: "shared/mobile_testimonial_section" %>
+      <%= render partial: "shared/mobile_contact_section" %>
+    </div>
+
     <div class="col-md-10 ms-sm-auto pl-0 pr-0 desktop">
+      <%= render partial: "shared/mobile_first_section" %>
       <%= render partial: "shared/desktop_first_section" %>
       <%= render partial: "shared/desktop_about_me_section" %>
       <%= render partial: "shared/desktop_wha_i_do_section" %>
@@ -130,9 +68,6 @@
 
 
 
-<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"-->
-<!--        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"-->
-<!--        crossorigin="anonymous"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
@@ -140,7 +75,5 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 </body>
 </html>
