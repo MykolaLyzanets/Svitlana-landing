@@ -1,5 +1,5 @@
 body {
-  font-family: Poppins, sans-serif!important;
+  font-family: Poppins!important;
 }
 
 .home-color {
@@ -11,7 +11,7 @@ p {
 }
 
 .back-home-color {
-  background-color: #E2FE16;
+  background-color: #000;
 }
 
 .text-white-50 {
@@ -24,19 +24,21 @@ p {
   position: fixed!important;
   top: 0;
   height: 100vh;
-  background-color: #111418;
+  background-color: #000;
 }
 
 /* Збільшення після наведення */
 .sidebar a {
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  font-family: Poppins,sans-serif;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 .sidebar a:hover {
-  font-size: 110%;
   color: #1baa80;
 }
 
@@ -104,8 +106,7 @@ p {
 
 .social-icons a {
   color: white;
-  font-size: 1.5rem;
-  margin-left: 10px;
+  font-size: 2rem;
 }
 
 .navbar {
@@ -132,25 +133,28 @@ p {
   color: white;
 }
 .section-1 h1 {
-  padding-top: 350px;
+  padding-top: 120px;
 }
 .scroll-btn {
-  background-color: #E2FE16;
-  color: grey;
-  border: none;
-  border-radius: 25px;
-  padding: 15px 40px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
+  display: flex;
+  width: 212px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 24px;
+  border: 1px solid #D1D1CC;
+  background-color: #000;
+  color: #FFFFFF;
 }
 
 .scroll-btn:hover {
-  background-color: #0056b3;
+  background-color: #E2FE16;
+  color: #959595;
 }
 
 .section-about-me {
-  background-color: #282828!important;
+  background-color: #000!important;
   color: white;
 }
 
@@ -158,37 +162,102 @@ p {
   padding-top: 50px;
 }
 
-.section-divider {
-  padding-bottom: 7px;
-  border-bottom: 1px solid hsla(0,0%,98%,.12);
-  margin-bottom: 20px; /* Додаємо відступ після полоси */
-  color: white;
-}
 
 .know-me-more-line {
-  background-color: #E2FE16;
   border-bottom: 5px solid hsla(0,0%,98%,.12);
   color: white;
-  width: 70px;
-  margin: 0 auto; /* Додаємо автоматичний відступ по горизонталі (центруємо) */
+  width: 100px;
+  height: 4px;
+  margin: 0 auto;
+  background: #DAF515;
 }
 
-.pt-120px {
-  padding-top: 120px;
+.service {
+  display: flex;
+  width: 880px;
+  padding-bottom: 0px;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #353333
+}
+
+.container-service {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px; /* Визначте тут мінімальний проміжок між текстовими елементами */
+}
+
+.left-text, .right-text {
+  flex-grow: 1;
+  border: 1px solid #353333;
+  padding: 10px;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.right-text {
+  text-align: right;
+}
+
+
+.know-me-more {
+  color: #FFF;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 48px */
+  text-transform: uppercase;
+}
+
+.know-me-more-h2 {
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135.5%; /* 32.52px */
+}
+
+.know-me-more-text {
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 141%; /* 22.56px */
+  max-width: 418px;
+}
+
+.mt-120px {
+  margin-top: 120px;
+}
+
+.section-divider {
+  border-bottom: 1px solid #353333;
+  font-size: 15px;
 }
 
 .download-btn {
+  display: inline-flex;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 24px;
+  border: 1px solid #D1D1CC;
+  color: #FFFFFF;
+  background-color: #000;
+}
+
+.download-btn:hover {
   background-color: #E2FE16;
-  color: grey;
-  border: none;
-  padding: 20px 50px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
+  color: #959595;
+  text-decoration: none;
 }
 
 .section-what-i-do  {
-  background-color: #282828!important;
+  background-color: #000!important;
   color: white;
 }
 
@@ -197,7 +266,7 @@ p {
 }
 
 .section-resume  {
-  background-color: #282828!important;
+  background-color: #000!important;
   color: white;
 }
 
@@ -253,8 +322,22 @@ body {
   }
 }
 
-.font-size {
-  font-size: 70px;
+.first-section {
+  font-family: Teko;
+  font-size: 110px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 132px */
+  text-transform: uppercase;
+}
+
+.text-first-section {
+  color: #FFF;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 139%; /* 23.63px */
+  letter-spacing: 1px;
 }
 
 .font-size-40 {
@@ -281,8 +364,8 @@ body {
   background-color: #282828;
   color: grey;
   display: block;
-  width: 200px; /* Змініть на необхідний розмір кнопки */
-  margin: 0 auto; /* Центрування горизонтально */
+  width: 200px;
+  margin: 0 auto;
   padding: 17px 15px;
   text-align: center;
   text-decoration: none;
@@ -307,11 +390,18 @@ body {
 }
 
 .section-contact {
-  background-color: #282828!important;
+  background-color: #000!important;
   color: white;
 }
 
 .language-select {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sidebar-select {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -323,7 +413,7 @@ body {
 }
 
 footer {
-  background-color: #282828!important;
+  background-color: #000!important;
   color: white;
 }
 
@@ -353,3 +443,121 @@ footer {
 .nav .nav-item .nav-link:hover {
   color: #E2FE16;;
 }
+
+/* Стилі для блоку з вибором мови */
+.language-select {
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  left: 8%; /* Розмістити блок по центру горизонтально */
+  transform: translateX(-50%); /* Центрування блоку по горизонталі */
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+/* Стилі для іконок мов */
+.language-select .flag {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.language {
+  color: #959595;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.pl-90px {
+  padding-left: 90px!important;
+}
+
+.btn-primary {
+  border-radius: 12px!important;
+  background: #DAF515!important;
+  border: none!important;
+  color: black!important;
+  padding: 8px!important;
+}
+
+.row-service {
+  border-bottom: 1px solid #353333;
+  display: flex;
+  padding-bottom: 30px;
+}
+
+.pt-70px {
+  padding-top: 70px!important;
+}
+
+.border-around {
+  border: 1px solid #353333;
+  padding: 20px;
+}
+
+.border-inside {
+  padding: 20px;
+  overflow: hidden;
+}
+
+.full-width-image {
+  background-size: cover;
+  width: 100%;
+}
+
+img {
+  transition: transform 0.25s;
+}
+
+.border-inside:hover img {
+  transform: scale(1.1);
+}
+
+.color-inside {
+  color: #ABABAB;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.address-font {
+  color: #FFF;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.pt-100px {
+  padding-top: 100px;
+}
+
+.pt-200px {
+  padding-top: 200px;
+}
+
+.address-btn {
+  display: flex;
+  width: 212px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 24px;
+  border: 1px solid #D1D1CC;
+  background: #DAF515;
+  color: #000000;
+
+}
+
+.address-btn:hover {
+  background-color: #E2FE16;
+  color: #000000;
+}
+
+
+
+
+

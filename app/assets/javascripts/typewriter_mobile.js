@@ -41,7 +41,6 @@ function startTyping() {
     selectedLanguage = localStorage.getItem('selectedLanguage') || 'en';
   }
 
-  // Оновлено динамічний вибір мови, який забезпечить зміну lang атрибута
   const typewriterText = document.querySelector('.typewriter-text');
   typewriterText.lang = selectedLanguage;
 

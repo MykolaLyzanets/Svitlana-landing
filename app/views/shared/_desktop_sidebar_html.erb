@@ -1,66 +1,34 @@
 <!-- Бокове меню -->
 <nav class="col-md-2 d-lg-block sidebar">
-  <div class="container-fluid">
-    <!-- Приклад вибору мови з флагами -->
-    <div id="language-select" class="language-select">
-      <div class="flag" onclick="changeLanguage('en')">
-        <img src="en.svg.png" alt="English Flag" width="30" height="20" />
-      </div>
-      <div class="flag" onclick="changeLanguage('uk')">
-        <img src="ukr.svg.png" alt="Український Прапор" width="30" height="20" />
-      </div>
-      <div class="flag" onclick="changeLanguage('sk')">
-        <img src="sk.png" alt="Slovak Flag" width="30" height="20" />
-      </div>
+  <div class="container-fluid text-center sidebar-select">
+    <ul class="nav flex-column">
+      <li class="nav-item mt-120px">
+        <a class="nav-link active fw-bold" href="#home" data-lang-key="home">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fw-bold" href="#about-me" data-lang-key="about_me">ABOUT ME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fw-bold" href="#what-i-do" data-lang-key="what_i_do">SERVICES</a>
+      </li>
+        <!--        <li class="nav-item">-->
+        <!--          <a class="nav-link" href="#resume" data-lang-key="resume">Resume</a>-->
+        <!--        </li>-->
+      <li class="nav-item">
+        <a class="nav-link fw-bold" href="#portfolio" data-lang-key="portfolio">PORTFOLIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fw-bold" href="#testimonial-desktop" data-lang-key="testimonial">TESTIMONIALS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fw-bold" href="#contact" data-lang-key="contact">CONTACT</a>
+      </li>
+    </ul>
+    <div id="language-select" class="language-select language">
+      <div class="flag fw-bold" onclick="changeLanguage('en')">EN</div>
+      <div class="flag fw-bold" onclick="changeLanguage('uk')">UK</div>
+      <div class="flag fw-bold" onclick="changeLanguage('sk')">SK</div>
     </div>
 
-    <div class="position-sticky text-center">
-      <div class="container">
-        <div class="row justify-content-center">
-          <a class="mb-lg-auto mt-lg-4">
-            <span class="bg-dark-2 rounded-pill p-2 mb-lg-1 d-none d-lg-inline-block mt-lg-4">
-              <img class="rounded-pill d-block border-solid" src="logo.jpg" alt="ava" width="160" height="160">
-            </span>
-          </a>
-        </div>
-      </div>
-
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" href="#home" data-lang-key="home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about-me" data-lang-key="about_me">About Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#what-i-do" data-lang-key="what_i_do">What I Do</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#resume" data-lang-key="resume">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#portfolio" data-lang-key="portfolio">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#testimonial-desktop" data-lang-key="testimonial">Testimonial</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact" data-lang-key="contact">Contact</a>
-        </li>
-      </ul>
-
-    </div>
-  </div>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="centered-container">
-        <div class="social-icons mt-3 footer">
-          <a href="https://www.facebook.com/profile.php?id=100010096574579" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://instagram.com/svitlana_designer__?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://twitter.com/yourpage" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>
-      </div>
-    </div>
   </div>
 </nav>
-

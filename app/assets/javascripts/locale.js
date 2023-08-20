@@ -1,12 +1,11 @@
 var translations = {
   en: {
-    home: "Home",
-    about_me: "About Me",
-    what_i_do: "What I Do",
-    resume: "Resume",
-    portfolio: "Portfolio",
-    testimonial: "Testimonial",
-    contact: "Contact",
+    home: "HOME",
+    about_me: "ABOUT ME",
+    what_i_do: "SERVICES",
+    portfolio: "PORTFOLIO",
+    testimonial: "TESTIMONIALS",
+    contact: "CONTACT",
     welcome_heading: "Welcome",
     welcome_subheading: "Thanks for visiting!"
   },
@@ -14,7 +13,6 @@ var translations = {
     home: "Головна",
     about_me: "Про мене",
     what_i_do: "Мої послуги",
-    resume: "Резюме",
     portfolio: "Портфоліо",
     testimonial: "Відгуки",
     contact: "Контакти",
@@ -25,7 +23,6 @@ var translations = {
     home: "Domov",
     about_me: "O mne",
     what_i_do: "Čo robím",
-    resume: "Životopis",
     portfolio: "Portfólio",
     testimonial: "Referencie",
     contact: "Kontakt",
@@ -60,11 +57,6 @@ function updateTranslations(language) {
     { id: 'welcome-subheading', langKey: 'welcome_subheading' },
     { id: 'welcome-mobile', langKey: 'welcome_heading' },
     { id: 'welcome2-mobile', langKey: 'welcome_subheading' },
-    // Тут ви можете додати багато елементів для оновлення перекладів
-    // Наприклад:
-    // { id: 'about-heading', langKey: 'about_heading' },
-    // { id: 'portfolio-heading', langKey: 'portfolio_heading' },
-    // ...
   ];
 
   elementsToUpdate.forEach(function(elementInfo) {
@@ -87,7 +79,6 @@ function updateTranslations(language) {
     }
   });
 }
-
 
 function changeLanguage(language) {
   localStorage.setItem('selectedLanguage', language);
